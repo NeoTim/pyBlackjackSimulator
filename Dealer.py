@@ -30,6 +30,9 @@ class Dealer(object):
         '''face: 2 3 4 5 6 7 8 9 10 J Q  K  A'''
         
         card_id = random.randint(0, 12)
+        
+        # Might need to use a link list for better modeling the odds
+        
         return card_id
     
     
@@ -46,6 +49,9 @@ class Dealer(object):
         self.deck_count = deck_count
         cnt = deck_count * 4
         self.card_count = [cnt,cnt,cnt,cnt,cnt,cnt,cnt,cnt,cnt,cnt,cnt,cnt,cnt]
+        
+        # Hmm counting this way might not be exactly the same
+        # Once a card is drawn the odd for randomization should change
         
         self.total_card_left = 52*deck_count
         

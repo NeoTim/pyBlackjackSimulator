@@ -1,5 +1,6 @@
 from Player import Player
 from Dealer import Dealer
+import sys
 
   
 class BlackjackGame(object):
@@ -161,8 +162,12 @@ class BlackjackGame(object):
         print ("------------>Avg_gain_per_game = %f, win_percent = %f" %(avg_gain, win_percent))
 #------------------TESTING CODE-----------------------
 
+print 'Number of arguments:', len(sys.argv), 'arguments.'
+print 'Argument List:', str(sys.argv)
+
+
 blackjack_game = BlackjackGame()
 blackjack_game.create_players()
 
-blackjack_game.simulate_game(10)
-    
+blackjack_game.simulate_game(int(sys.argv[1]))
+ 
